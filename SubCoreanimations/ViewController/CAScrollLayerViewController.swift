@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CAScrollLayerViewController.swift
 //  SubCoreanimations
 //
 //  Created by GLB-311-PC on 05/10/18.
@@ -8,16 +8,14 @@
 
 import UIKit
 
-
-class ViewController: UIViewController {
+class CAScrollLayerViewController: UIViewController {
+    
     var translation: CGFloat = 0.0
     var moveUp : Bool = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
-         if let img = UIImage(named: "sky"), let imgTop = UIImage(named: "train"), let imgParticle = UIImage(named: "steam") { // 1
+
+        if let img = UIImage(named: "sky"), let imgTop = UIImage(named: "train"), let imgParticle = UIImage(named: "steam") { // 1
             let imageSize = img.size
             let layer = CALayer() // 2
             layer.bounds = CGRect(x: 0.0, y: 0.0, width: imageSize.width, height: imageSize.height) // 3
@@ -33,20 +31,18 @@ class ViewController: UIViewController {
             layerTop.contents = imgTop.cgImage // 19
             view.layer.addSublayer(scrollLayerTop)  // 20
             scrollLayerTop.addSublayer(layerTop)  // 21
+            
             //Add multiple layer
             let emitterLayer = CAEmitterLayer() // 26
             emitterLayer.emitterPosition = CGPoint(x: (layerTop.bounds.width / 2) + 40.0, y: -10.0) // 27
             emitterLayer.emitterShape = kCAEmitterLayerPoint // 28
             
             emitterCell.contents = imgParticle.cgImage // 39
-            emitterLayer.emitterCells = [ emitterCell ] // 40
+            emitterLayer.emitterCells = [emitterCell ] // 40
             layerTop.addSublayer(emitterLayer) // 41
         }
-       
-        
         displayLink.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
     }
-    
     @objc func scrollLayerScroll() {
         let newPoint = CGPoint(x: translation, y: 0.0)
         scrollLayer.scroll(newPoint)
@@ -66,11 +62,6 @@ class ViewController: UIViewController {
     
     func stopDisplayLink() {
         displayLink.invalidate()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     lazy var emitterCell: CAEmitterCell = {
         let emitterCell : CAEmitterCell = CAEmitterCell() // 29
@@ -95,11 +86,11 @@ class ViewController: UIViewController {
     
     lazy var scrollLayer : CAScrollLayer = {
         let scrollLayer = CAScrollLayer() // 8
-//        scrollLayer.bounds = CGRect(x: 0.0, y: 0.0, width: 150.0, height: 300.0) // 9
+        //        scrollLayer.bounds = CGRect(x: 0.0, y: 0.0, width: 150.0, height: 300.0) // 9
         scrollLayer.bounds = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.size.width, height:self.view.bounds.size.height) // 9
         scrollLayer.position = CGPoint(x: self.view.bounds.size.width/2, y: self.view.bounds.size.height/2) // 10
-//        scrollLayer.borderColor = UIColor.black.cgColor // 11
-//        scrollLayer.borderWidth = 5.0 // 12
+        //        scrollLayer.borderColor = UIColor.black.cgColor // 11
+        //        scrollLayer.borderWidth = 5.0 // 12
         scrollLayer.scrollMode = kCAScrollHorizontally // 13
         return scrollLayer
     }()
@@ -111,5 +102,11 @@ class ViewController: UIViewController {
         return displayLink
     }()
     
-}
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 
+
+}

@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD924C41216885950082FC09 /* FlameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD924C40216885950082FC09 /* FlameViewController.swift */; };
+		CD924C4321688CD00082FC09 /* ConfettiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD924C4221688CD00082FC09 /* ConfettiViewController.swift */; };
 		CDDF14DC21674C1900EE3DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF14DB21674C1900EE3DF7 /* AppDelegate.swift */; };
 		CDDF14DE21674C1900EE3DF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF14DD21674C1900EE3DF7 /* ViewController.swift */; };
 		CDDF14E121674C1900EE3DF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDDF14DF21674C1900EE3DF7 /* Main.storyboard */; };
 		CDDF14E321674C2100EE3DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDDF14E221674C2100EE3DF7 /* Assets.xcassets */; };
 		CDDF14E621674C2100EE3DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDDF14E421674C2100EE3DF7 /* LaunchScreen.storyboard */; };
+		CDDF14EF21677B0500EE3DF7 /* CAScrollLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF14EE21677B0500EE3DF7 /* CAScrollLayerViewController.swift */; };
+		CDDF14F121677C1300EE3DF7 /* CAEmittingLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF14F021677C1300EE3DF7 /* CAEmittingLayerViewController.swift */; };
+		CDDF14F921678A2C00EE3DF7 /* SnowEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF14F821678A2C00EE3DF7 /* SnowEffectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD924C40216885950082FC09 /* FlameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlameViewController.swift; sourceTree = "<group>"; };
+		CD924C4221688CD00082FC09 /* ConfettiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiViewController.swift; sourceTree = "<group>"; };
 		CDDF14D821674C1900EE3DF7 /* SubCoreanimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubCoreanimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDF14DB21674C1900EE3DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDDF14DD21674C1900EE3DF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,9 @@
 		CDDF14E221674C2100EE3DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDDF14E521674C2100EE3DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDDF14E721674C2100EE3DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDDF14EE21677B0500EE3DF7 /* CAScrollLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAScrollLayerViewController.swift; sourceTree = "<group>"; };
+		CDDF14F021677C1300EE3DF7 /* CAEmittingLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAEmittingLayerViewController.swift; sourceTree = "<group>"; };
+		CDDF14F821678A2C00EE3DF7 /* SnowEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowEffectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,35 @@
 		CDDF14DA21674C1900EE3DF7 /* SubCoreanimations */ = {
 			isa = PBXGroup;
 			children = (
+				CDDF14ED21677AEA00EE3DF7 /* ViewController */,
 				CDDF14DB21674C1900EE3DF7 /* AppDelegate.swift */,
-				CDDF14DD21674C1900EE3DF7 /* ViewController.swift */,
 				CDDF14DF21674C1900EE3DF7 /* Main.storyboard */,
 				CDDF14E221674C2100EE3DF7 /* Assets.xcassets */,
 				CDDF14E421674C2100EE3DF7 /* LaunchScreen.storyboard */,
 				CDDF14E721674C2100EE3DF7 /* Info.plist */,
 			);
 			path = SubCoreanimations;
+			sourceTree = "<group>";
+		};
+		CDDF14ED21677AEA00EE3DF7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDDF14F7216789FD00EE3DF7 /* CAEmittingSubLayer */,
+				CDDF14DD21674C1900EE3DF7 /* ViewController.swift */,
+				CDDF14EE21677B0500EE3DF7 /* CAScrollLayerViewController.swift */,
+				CDDF14F021677C1300EE3DF7 /* CAEmittingLayerViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CDDF14F7216789FD00EE3DF7 /* CAEmittingSubLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CDDF14F821678A2C00EE3DF7 /* SnowEffectViewController.swift */,
+				CD924C40216885950082FC09 /* FlameViewController.swift */,
+				CD924C4221688CD00082FC09 /* ConfettiViewController.swift */,
+			);
+			path = CAEmittingSubLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD924C41216885950082FC09 /* FlameViewController.swift in Sources */,
 				CDDF14DE21674C1900EE3DF7 /* ViewController.swift in Sources */,
+				CDDF14F921678A2C00EE3DF7 /* SnowEffectViewController.swift in Sources */,
+				CD924C4321688CD00082FC09 /* ConfettiViewController.swift in Sources */,
+				CDDF14EF21677B0500EE3DF7 /* CAScrollLayerViewController.swift in Sources */,
 				CDDF14DC21674C1900EE3DF7 /* AppDelegate.swift in Sources */,
+				CDDF14F121677C1300EE3DF7 /* CAEmittingLayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
